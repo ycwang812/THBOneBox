@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<form-beans></form-beans>
+
+	<global-exceptions></global-exceptions>
+
+	<action-mappings>
+
+		<action path="/searchRecord" type="tw.gov.thb.onebox.action.SearchRecordAction"></action>
+		
+		<action path="/socialAnalytics" type="tw.gov.thb.onebox.action.SocialAnalyticsAction">
+		    <forward name="show" path="/sa/searchResult.jsp" />
+		</action>
+
+	</action-mappings>
+
+	<controller>
+		<set-property value="org.springframework.web.struts.DelegatingRequestProcessor" property="processorClass" />
+	</controller>
+
+</struts-config>
+

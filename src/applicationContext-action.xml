@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    
+    <bean id="searchRecordAction" class="tw.gov.thb.onebox.action.SearchRecordAction" singleton="false" name="/searchRecord">
+         <property name="searchRecordService" ref="searchRecordService" />
+	</bean>
+	
+    <bean id="socialAnalyticsAction" class="tw.gov.thb.onebox.action.SocialAnalyticsAction" singleton="false" name="/socialAnalytics">
+        <property name="socialAnalyticsService" ref="socialAnalyticsService" />
+	</bean>
+    
+</beans>
